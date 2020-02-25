@@ -1,0 +1,24 @@
+<h1>Edit Restaurant</h1>
+<!-- <form action="/tasks" method="post">
+  <label for="title">title: </label>
+  <input type="text" name="task[title]" id="title">
+
+  <label for="details">details: </label>
+  <input type="text" name="task[details]" id="details">
+
+  <input type="submit">
+</form> -->
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "back to list", tasks_path %>
+
+
